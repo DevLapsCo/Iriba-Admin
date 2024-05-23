@@ -1,0 +1,217 @@
+.question{
+    display: flex;
+    inline-size: 100%;
+    min-block-size: 4.5rem;
+    margin-top: 5rem;
+}
+
+.container{
+    inline-size: 40%;
+    margin: auto;
+    max-inline-size: 68rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile{
+    width: 40px;
+    height: 40px;
+}
+
+.logo, .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile-circle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(40, 169, 255);
+    border-radius: 40px;
+}
+
+
+/* Questions */
+
+.questions{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+    /* margin-top: 10px; */
+}
+
+.description{
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(160, 160, 160);
+}
+
+.question-comp{
+    display: flex;
+    justify-content: first baseline;
+    align-items: first baseline;
+    gap: 20px;
+    padding: 25px 20px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.144);
+    border-radius: 20px;
+}
+
+.numbering{
+    background-color: #000;
+    min-width: 25px;
+    min-height: 25px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #fff;
+}
+
+.quest{
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+}
+
+.quest input{
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1.5px solid grey;
+    color: #808080;
+}
+
+.submit-button{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.submit-button span{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* width: 35%; */
+    font-size: 13px;
+    color: #808080;
+}
+
+.submit-button button{
+    padding: 10px 90px;
+    font-size: 20px;
+    background-color: rgb(0, 153, 255);
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.submit-button button:active{
+    background-color: rgb(0, 117, 196);
+}
+
+.email{
+    width: 100%;
+    display: flex;
+    float: right;
+}
+
+.email-prompt{
+    width: 18svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    border: 0;
+    background-color: #ebebeb;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.question-input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    overflow: hidden; /* Ensure the scrollbar doesn't appear */
+    resize: none; /* Optional: Prevent manual resizing */
+  }
+
+  .add-question-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .add-question-button button{
+    background-color: #000;
+    border: 0;
+    outline: 0;
+    padding: 5px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .add-question-button button:active{
+    background-color: #808080;
+  }
+  
+  .delete-button{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(226, 5, 5);
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: #fff;
+  }
+
+  .delete-button:active{
+    background-color: rgb(182, 0, 0);
+  }
+  
+
+@media screen and (max-width: 35.938rem) {
+    .question {
+        margin-top: 2rem;
+        min-block-size: 3.5rem;
+        padding: 0 30px;
+    }
+
+    .container {
+        inline-size: 100%;
+    }
+
+      .quest span, .quest input{
+        font-size: 17px;
+    }
+}   

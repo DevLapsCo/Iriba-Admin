@@ -1,0 +1,31 @@
+<div class="question">
+    <form class="container" (ngSubmit)="publish()" [formGroup]="form">
+       <div class="head">
+          <div class="logo">
+              <h1>Lg</h1>
+          </div>
+          <div class="profile">
+            <span class="profile-circle">PA</span>
+          </div>
+       </div>
+       <textarea class="question-input">About this questionnaire.</textarea>
+       <div class="questions" formArrayName="questions">   
+         @for ( ques of questions.controls; track ques) {
+             <div class="question-comp" >
+                 <span class="numbering">{{$index + 1}}</span>
+                 <div class="quest">
+                  <textarea class="question-input" [formControlName]="$index" placeholder="Your Question here..."></textarea>
+                   <button type="button" (click)="remove($index)" class="material-symbols-outlined delete-button">delete</button>
+                 </div>
+            </div>
+         }
+       </div>
+       <div class="add-question-button">
+        <button  type="button" (click)="addToList()" class="material-symbols-outlined">add </button>
+      </div>
+       <div class="submit-button">
+         <span><b>Ready to publish? </b>Please go through again it make sure it's all good.</span>
+        <button type="submit">Publish</button>
+       </div>
+      </form>
+</div>
