@@ -4,3 +4,4 @@ export interface Questions {
     answer: string;
     votes : number;
 }
+
