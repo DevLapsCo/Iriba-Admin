@@ -10,8 +10,11 @@ import { NgFor } from '@angular/common';
   templateUrl: './questionaire.component.html',
   styleUrl: './questionaire.component.css'
 })
-export class QuestionaireComponent  {
+export class QuestionaireComponent implements OnInit{
 
+  ngOnInit(): void {
+    this.addCreds();
+  }
   
 
   form: FormGroup;

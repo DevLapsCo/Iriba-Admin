@@ -13,12 +13,17 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 40px;
 }
 
 .head{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo img{
+    width: 100px;
 }
 
 .profile{
@@ -113,6 +118,7 @@
     flex-direction: column;
     text-align: center;
     /* width: 35%; */
+    gap: 5px;
     font-size: 13px;
     color: #808080;
 }
