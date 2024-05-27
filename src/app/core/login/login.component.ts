@@ -17,7 +17,7 @@ export class LoginComponent {
   GoogleOAuthRedirect(){
     this.auth.OAuthLogin().subscribe({
       next: (n:any) => {
-        this.redirectUri = n.redirecturi;
+        this.redirectUri = n.redirectUri;
         console.log(n)
       },
       complete: () => {

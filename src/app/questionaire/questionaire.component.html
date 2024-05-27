@@ -1,31 +1,42 @@
 <div class="question">
-    <form class="container" (ngSubmit)="publish()" [formGroup]="form">
-       <div class="head">
+  <div class="container">
+  <form [formGroup]="kForm" (ngSubmit)="($event)">
+         <div class="head">
           <div class="logo">
               <img src="../../assets/Iriba-Logo.webp" alt="">
           </div>
           <div class="profile">
-            <span class="profile-circle">PA</span>
+            <span class="profile-circle">{{profileInitial()}}</span>
           </div>
        </div>
-       <textarea class="question-input">About this questionnaire.</textarea>
-       <div class="questions" formArrayName="questions">   
-         @for ( ques of questions.controls; track ques) {
-             <div class="question-comp" >
-                 <span class="numbering">{{$index + 1}}</span>
-                 <div class="quest">
-                  <textarea class="question-input" [formControlName]="$index" placeholder="Your Question here..."></textarea>
-                   <button type="button" (click)="remove($index)" class="material-symbols-outlined delete-button">delete</button>
-                 </div>
-            </div>
-         }
-       </div>
-       <div class="add-question-button">
-        <button  type="button" (click)="addToList()" class="material-symbols-outlined">add </button>
-      </div>
-       <div class="submit-button">
-         <span><b>Ready to publish? </b>Please go through again to make sure it's all good.</span>
-        <button type="submit">Publish</button>
-       </div>
+       <textarea class="question-input"  name="about"  placeholder="Write About this questionnaire here..."></textarea>
+       <div class=""></div>
+
+       <div class="questions" >
+        <div formArrayName="contactsArray" *ngFor="let contact of contacts.controls; let i = index">
+          <div [formGroupName]="i">
+      
+            <div class="question-comp" >
+              <span class="numbering">{{i + 1}}</span>
+              <div class="quest">
+               <textarea (input)="adjustTextareaHeight($event)" class="question-input" formControlName="email" placeholder="Your Question here..."></textarea>
+                <button type="button" (click)="remove(i)" class="material-symbols-outlined delete-button">delete</button>
+              </div>
+         </div>
+           
+      
+          </div>
+          </div>
+      
+        </div>      
+        
+        <div class="add-question-button">
+          <button  type="button" (click)="addNewContact()" class="material-symbols-outlined">add </button>
+        </div>
+        <div class="submit-button">
+          <span><b>Ready to publish? </b>Please go through again to make sure it's all good.</span>
+          <button type="submit">Publish</button>
+        </div>
       </form>
-</div>
+    </div>
+    </div>
